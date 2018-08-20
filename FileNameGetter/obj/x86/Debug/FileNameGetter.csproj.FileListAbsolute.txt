@@ -1,0 +1,7 @@
+C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\bin\Debug\FileNameGetter.exe
+C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\bin\Debug\FileNameGetter.pdb
+C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.FileNameGetter.resources
+C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.Properties.Resources.resources
+C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.csproj.GenerateResource.Cache
+C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.exe
+C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.pdb
