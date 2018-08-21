@@ -34,20 +34,44 @@ namespace FileNameGetter
             //ドロップ時にテキストボックス内をクリア
             textBox.Clear();
 
-            //ドロップされたディレクトリのパスを取得
-            string[] dirPath = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            //ドロップアイテム全てのパスを配列に取得
+            string[] dropItemPath = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
-            //ディレクトリ内のファイルパスを取得
-            foreach (string dir in dirPath)
-            {
-                string[] files = System.IO.Directory.GetFiles(dir, "*", System.IO.SearchOption.TopDirectoryOnly);
-                
-                //ファイルパスからファイル名を取得し、テキストボックスに追加
-                foreach (string fileName in files)
+            //ドロップアイテム個々のパスを取得
+            foreach (string dropItem in dropItemPath)
+            {                
+                //ドロップがディレクトリの場合
+                if (System.IO.Directory.Exists(dropItem))
                 {
-                    textBox.AppendText(System.IO.Path.GetFileName(fileName) + "\r\n");
-                }
+                    //該当フォルダ名を表示
+                    textBox.AppendText("【表示フォルダ：" + System.IO.Path.GetFileName(dropItem) + "】\r\n");
 
+                    string[] files = System.IO.Directory.GetFiles(@dropItem, "*", System.IO.SearchOption.TopDirectoryOnly);
+                    
+                    //サブフォルダ名を取得
+                    IEnumerable<string> directryNames = System.IO.Directory.EnumerateDirectories(@dropItem, "*", System.IO.SearchOption.TopDirectoryOnly);
+                    
+                    //ファイルパスからファイル名を取得し、テキストボックスに追加
+                    foreach (string fileName in files)
+                    {
+                        textBox.AppendText(System.IO.Path.GetFileName(fileName) + "\r\n");
+                    }
+
+                    //サブフォルダ名を《》で囲み表示
+                    foreach (string subDirName in directryNames)
+                    {
+                        textBox.AppendText("《" + System.IO.Path.GetFileName(subDirName) + "》\r\n");
+                    }
+
+                    textBox.AppendText("\r\n");
+
+                }
+                //ドロップがディレクトリ以外
+                else
+                {
+                    textBox.AppendText("【ファイル単独】\r\n" + System.IO.Path.GetFileName(dropItem) + "\r\n\r\n");
+                }
+                    
             }
 
         }   

@@ -5,3 +5,12 @@ C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\
 C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.csproj.GenerateResource.Cache
 C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.exe
 C:\Users\fj2761dh\AppData\Local\Temporary Projects\FileNameGetter\obj\x86\Debug\FileNameGetter.pdb
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\bin\Debug\FileNameGetter.exe
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\bin\Debug\FileNameGetter.pdb
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\obj\x86\Debug\FileNameGetter.csprojAssemblyReference.cache
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\obj\x86\Debug\FileNameGetter.FileNameGetter.resources
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\obj\x86\Debug\FileNameGetter.Properties.Resources.resources
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\obj\x86\Debug\FileNameGetter.csproj.GenerateResource.cache
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\obj\x86\Debug\FileNameGetter.csproj.CoreCompileInputs.cache
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\obj\x86\Debug\FileNameGetter.exe
+C:\Users\takih\Documents\GitHub\FileNameGetter\FileNameGetter\obj\x86\Debug\FileNameGetter.pdb
