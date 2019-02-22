@@ -85,7 +85,7 @@
             // 
             this.showSubDirName.AutoSize = true;
             this.showSubDirName.Font = new System.Drawing.Font("MS UI Gothic", 7F);
-            this.showSubDirName.Location = new System.Drawing.Point(237, 9);
+            this.showSubDirName.Location = new System.Drawing.Point(254, 9);
             this.showSubDirName.Name = "showSubDirName";
             this.showSubDirName.Size = new System.Drawing.Size(126, 17);
             this.showSubDirName.TabIndex = 3;
