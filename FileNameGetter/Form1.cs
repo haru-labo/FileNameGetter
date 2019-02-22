@@ -25,7 +25,7 @@ namespace FileNameGetter
         //フォーム内にドラッグしたときのエフェクト
         private void FileNameGetter_DragEnter(object sender, DragEventArgs e)
         {
-            e.Effect = DragDropEffects.All;
+            e.Effect = DragDropEffects.Copy;
         }
 
         //ドロップ時の処理
@@ -37,6 +37,8 @@ namespace FileNameGetter
             //ドロップアイテム全てのパスを配列に取得
             string[] dropItemPath = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
+            string[] files;
+
             //ドロップアイテム個々のパスを取得
             foreach (string dropItem in dropItemPath)
             {                
@@ -44,26 +46,33 @@ namespace FileNameGetter
                 if (System.IO.Directory.Exists(dropItem))
                 {
                     //該当フォルダ名を表示
-                    textBox.AppendText("【表示フォルダ：" + System.IO.Path.GetFileName(dropItem) + "】\r\n");
+                    textBox.AppendText("【表示フォルダ：" + System.IO.Path.GetFileName(dropItem) + "】");
 
-                    string[] files = System.IO.Directory.GetFiles(@dropItem, "*", System.IO.SearchOption.TopDirectoryOnly);
-                    
-                    //サブフォルダ名を取得
-                    IEnumerable<string> directryNames = System.IO.Directory.EnumerateDirectories(@dropItem, "*", System.IO.SearchOption.TopDirectoryOnly);
+                    //サブフォルダの検索設定
+                    if (serchSubDir.Checked) { 
+                        files = System.IO.Directory.GetFiles(@dropItem, "*", System.IO.SearchOption.AllDirectories);
+                    } else {
+                        files = System.IO.Directory.GetFiles(@dropItem, "*", System.IO.SearchOption.TopDirectoryOnly);
+                    }
                     
                     //ファイルパスからファイル名を取得し、テキストボックスに追加
                     foreach (string fileName in files)
                     {
-                        textBox.AppendText(System.IO.Path.GetFileName(fileName) + "\r\n");
+                            textBox.AppendText("\r\n" + System.IO.Path.GetFileName(fileName));
                     }
 
-                    //サブフォルダ名を《》で囲み表示
-                    foreach (string subDirName in directryNames)
-                    {
-                        textBox.AppendText("《" + System.IO.Path.GetFileName(subDirName) + "》\r\n");
-                    }
+                    //サブフォルダ表示チェックあり
+                    if (showSubDirName.Checked) {
+                        //サブフォルダ名を取得
+                        IEnumerable<string> directryNames = System.IO.Directory.EnumerateDirectories(@dropItem, "*", System.IO.SearchOption.TopDirectoryOnly);
 
-                    textBox.AppendText("\r\n");
+                        //サブフォルダ名を《》で囲み表示
+                        foreach (string subDirName in directryNames)
+                        {
+                            textBox.AppendText("\r\n《" + System.IO.Path.GetFileName(subDirName) + "》");
+                        }
+
+                    }
 
                 }
                 //ドロップがディレクトリ以外
