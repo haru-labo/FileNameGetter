@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileNameGetter));
             this.textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.serchSetting = new System.Windows.Forms.Label();
-            this.serchSubDir = new System.Windows.Forms.CheckBox();
+            this.searchSetting = new System.Windows.Forms.Label();
+            this.searchSubDir = new System.Windows.Forms.CheckBox();
             this.showSubDirName = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -60,26 +60,26 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ここにファイルまたはフォルダをドラッグ＆ドロップしてください";
             // 
-            // serchSetting
+            // searchSetting
             // 
-            this.serchSetting.AutoSize = true;
-            this.serchSetting.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.serchSetting.Location = new System.Drawing.Point(12, 9);
-            this.serchSetting.Name = "serchSetting";
-            this.serchSetting.Size = new System.Drawing.Size(80, 15);
-            this.serchSetting.TabIndex = 2;
-            this.serchSetting.Text = "検索設定：";
+            this.searchSetting.AutoSize = true;
+            this.searchSetting.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchSetting.Location = new System.Drawing.Point(12, 9);
+            this.searchSetting.Name = "searchSetting";
+            this.searchSetting.Size = new System.Drawing.Size(80, 15);
+            this.searchSetting.TabIndex = 2;
+            this.searchSetting.Text = "検索設定：";
             // 
-            // serchSubDir
+            // searchSubDir
             // 
-            this.serchSubDir.AutoSize = true;
-            this.serchSubDir.Font = new System.Drawing.Font("MS UI Gothic", 7F);
-            this.serchSubDir.Location = new System.Drawing.Point(98, 9);
-            this.serchSubDir.Name = "serchSubDir";
-            this.serchSubDir.Size = new System.Drawing.Size(133, 17);
-            this.serchSubDir.TabIndex = 3;
-            this.serchSubDir.Text = "サブフォルダ内を含める";
-            this.serchSubDir.UseVisualStyleBackColor = true;
+            this.searchSubDir.AutoSize = true;
+            this.searchSubDir.Font = new System.Drawing.Font("MS UI Gothic", 7F);
+            this.searchSubDir.Location = new System.Drawing.Point(98, 9);
+            this.searchSubDir.Name = "searchSubDir";
+            this.searchSubDir.Size = new System.Drawing.Size(133, 17);
+            this.searchSubDir.TabIndex = 3;
+            this.searchSubDir.Text = "サブフォルダ内を含める";
+            this.searchSubDir.UseVisualStyleBackColor = true;
             // 
             // showSubDirName
             // 
@@ -99,8 +99,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 326);
             this.Controls.Add(this.showSubDirName);
-            this.Controls.Add(this.serchSubDir);
-            this.Controls.Add(this.serchSetting);
+            this.Controls.Add(this.searchSubDir);
+            this.Controls.Add(this.searchSetting);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -119,8 +119,8 @@
 
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label serchSetting;
-        private System.Windows.Forms.CheckBox serchSubDir;
+        private System.Windows.Forms.Label searchSetting;
+        private System.Windows.Forms.CheckBox searchSubDir;
         private System.Windows.Forms.CheckBox showSubDirName;
     }
 }
